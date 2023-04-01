@@ -1,0 +1,24 @@
+import React, { useState } from 'react';
+
+function InputField() {
+  const [value, setValue] = useState('');
+
+  const handleChange = event => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <div>
+      <input type="text" value={value} onChange={handleChange} />
+      <p>{value}</p>
+    </div>
+  );
+}
+
+export default InputField;
+
+This program is a React component that renders an input field and a paragraph element. The input field is a controlled component, meaning its value is controlled by React state. The component uses the useState hook to define a state variable called value that is initially set to an empty string.
+
+The handleChange function is called every time the user types in the input field. It receives the event object as its argument, and updates the value state with the new value of the input field by calling setValue.
+
+Finally, the value state is rendered inside the paragraph element, so that the paragraph element automatically updates its content to match the current value of the input field.
